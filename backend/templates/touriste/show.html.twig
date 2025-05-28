@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Touriste{% endblock %}
+
+{% block body %}
+    <h1>Touriste</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ touriste.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_touriste_index') }}">back to list</a>
+
+    <a href="{{ path('app_touriste_edit', {'id': touriste.id}) }}">edit</a>
+
+    {{ include('touriste/_delete_form.html.twig') }}
+{% endblock %}
